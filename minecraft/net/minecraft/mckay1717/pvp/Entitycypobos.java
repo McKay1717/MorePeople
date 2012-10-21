@@ -5,11 +5,13 @@ import net.minecraft.src.EntityAIHurtByTarget;
 import net.minecraft.src.EntityAINearestAttackableTarget;
 import net.minecraft.src.EntityAIWatchClosest;
 import net.minecraft.src.EntityMob;
+import net.minecraft.src.Item;
+import net.minecraft.src.ItemStack;
 import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
+import net.minecraft.src.*;
 
 public class Entitycypobos extends EntityPvP {
-
+	private static final ItemStack defaultHeldItem = new ItemStack(net.minecraft.src.Item.axeSteel, 1);
 	public Entitycypobos(World par1World) {
 		super(par1World);
 		this.username  = "cypobos";
@@ -39,5 +41,9 @@ public class Entitycypobos extends EntityPvP {
         super.readEntityFromNBT(par1NBTTagCompound);
         this.username = par1NBTTagCompound.getString("Username");
     }
+	 public ItemStack getHeldItem()
+	    {
+	        return defaultHeldItem;
+	    }
 
 }

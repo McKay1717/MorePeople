@@ -13,12 +13,12 @@ import net.minecraft.src.*;
 import org.lwjgl.opengl.GL11;
 
 @SideOnly(Side.CLIENT)
-public class RenderPvP extends RenderBiped
+public class RenderAly extends RenderBiped
 {
     private ModelBiped modelBipedMain;
     public static String[] armorFilenamePrefix = new String[] {"cloth", "chain", "iron", "diamond", "gold"};
 
-    public RenderPvP()
+    public RenderAly()
     {
     	
         super(new ModelBiped(0.0F), 0.5F);
@@ -30,20 +30,20 @@ public class RenderPvP extends RenderBiped
     /**
      * Used to render a player's name above their head
      */
-    protected void renderName(EntityPvP par1EntityPvP, double par2, double par4, double par6)
+    protected void renderName(EntityAly par1EntityAly, double par2, double par4, double par6)
     {
-        if (Minecraft.isGuiEnabled() && par1EntityPvP != this.renderManager.livingPlayer)
+        if (Minecraft.isGuiEnabled() && par1EntityAly != this.renderManager.livingPlayer)
         {
             float var8 = 1.6F;
             float var9 = 0.016666668F * var8;
-            double var10 = par1EntityPvP.getDistanceSqToEntity(this.renderManager.livingPlayer);
-            float var12 = par1EntityPvP.isSneaking() ? 32.0F : 64.0F;
+            double var10 = par1EntityAly.getDistanceSqToEntity(this.renderManager.livingPlayer);
+            float var12 = par1EntityAly.isSneaking() ? 32.0F : 64.0F;
 
             if (var10 < (double)(var12 * var12))
             {
-                String var13 = par1EntityPvP.username;
+                String var13 = par1EntityAly.username;
 
-                if (par1EntityPvP.isSneaking())
+                if (par1EntityAly.isSneaking())
                 {
                     FontRenderer var14 = this.getFontRendererFromRenderManager();
                     GL11.glPushMatrix();
@@ -75,19 +75,19 @@ public class RenderPvP extends RenderBiped
                     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
                     GL11.glPopMatrix();
                 }
-                else if (par1EntityPvP.isPlayerSleeping())
+                else if (par1EntityAly.isPlayerSleeping())
                 {
-                    this.renderLivingLabel(par1EntityPvP, var13, par2, par4 - 1.5D, par6, 64);
+                    this.renderLivingLabel(par1EntityAly, var13, par2, par4 - 1.5D, par6, 64);
                 }
                 else
                 {
-                    this.renderLivingLabel(par1EntityPvP, var13, par2, par4, par6, 64);
+                    this.renderLivingLabel(par1EntityAly, var13, par2, par4, par6, 64);
                 }
             }
         }
     }
 
-    protected void renderPlayerScale(EntityPvP par1EntityPvP, float par2)
+    protected void renderPlayerScale(EntityAly par1EntityAly, float par2)
     {
         float var3 = 0.9375F;
         GL11.glScalef(var3, var3, var3);
@@ -105,7 +105,7 @@ public class RenderPvP extends RenderBiped
      */
     protected void passSpecialRender(EntityLiving par1EntityLiving, double par2, double par4, double par6)
     {
-        this.renderName((EntityPvP)par1EntityLiving, par2, par4, par6);
+        this.renderName((EntityAly)par1EntityLiving, par2, par4, par6);
     }
 
     /**
@@ -114,6 +114,6 @@ public class RenderPvP extends RenderBiped
      */
     protected void preRenderCallback(EntityLiving par1EntityLiving, float par2)
     {
-        this.renderPlayerScale((EntityPvP)par1EntityLiving, par2);
+        this.renderPlayerScale((EntityAly)par1EntityLiving, par2);
     }
 }

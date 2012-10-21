@@ -32,7 +32,7 @@ public class mod_PvP extends BaseMod   {
 	static int niveau = 3;
 	static int maxplayer = 20;
 	static boolean EpicMode = false;
-	public int id = 124;
+	public int id = ModLoader.getUniqueEntityId();
 	
  public void registerrecipe()
  {
@@ -41,9 +41,15 @@ public class mod_PvP extends BaseMod   {
  public void registerentity()
  {
 
-	 ModLoader.registerEntityID(EntityTheFumelgo.class, "TheFumelgo", id+1, 001, 000);
+	 ModLoader.registerEntityID(EntityTheFumelgo.class, "assasineman", id+1, 001, 000);
 	 ModLoader.registerEntityID(EntityFurtys.class, "Furtys", id+2, 999, 000);
 	 ModLoader.registerEntityID(Entitycypobos.class, "cypobos", id+3, 899, 000);
+	 ModLoader.registerEntityID(EntitySticor.class, "Sticor", id+4, 799, 000);
+	 ModLoader.registerEntityID(EntityKnux14.class, "Knux14", id+5, 899, 800);
+	 ModLoader.registerEntityID(Entityvoolvif.class, "Voolvif_3", id+6, 899, 261165416);
+	 ModLoader.registerEntityID(EntityNotch.class, "Notch", id+8, 511651, 151321);
+	 ModLoader.registerEntityID(EntityChrisFly81.class, "ChrisFly81", id+7, 1615546, 54941265);
+	 ModLoader.registerEntityID(EntityTheDudu36.class, "TheDudu36", id+9, 64654, 359974);
  }
  public void PvPspawn()
  {
@@ -63,6 +69,12 @@ public class mod_PvP extends BaseMod   {
 	 map.put(EntityTheFumelgo.class, new RenderPvP());
 	 map.put(EntityFurtys.class, new RenderPvP());
 	 map.put(Entitycypobos.class, new RenderPvP());
+	 map.put(EntitySticor.class, new RenderPvP());
+	 map.put(EntityKnux14.class, new RenderPvP());
+	 map.put(Entityvoolvif.class, new RenderPvP());
+	 map.put(EntityNotch.class, new RenderPvP());
+	 map.put(EntityChrisFly81.class, new RenderPvP());
+	 map.put(EntityTheDudu36.class, new RenderAly());
  
  }
 
@@ -70,9 +82,7 @@ public class mod_PvP extends BaseMod   {
     {
         configuration = new Configuration(new File(ModLoader.getMinecraftInstance().getMinecraftDir(), "/config/MorePLayer.cfg"));
         configuration.load();
-        niveau = Integer.parseInt(configuration.getOrCreateIntProperty("Difficulter", "general", 1).value);
-        maxplayer = Integer.parseInt(configuration.getOrCreateIntProperty("Nombre de joueur differant", "general", 20).value);
-        EpicMode = Boolean.parseBoolean(configuration.getOrCreateBooleanProperty("Epic Mode", "general", false).value);
+       
         configuration.save();
         return true;
     }
@@ -101,7 +111,6 @@ public void load() {
 	// TODO Auto-generated method stub
 	 registerentity();
 	 configurationProperties();
-	 MinecraftForgeClient.preloadTexture("http://darkube.net/skin/Patate.png");
  }
 }
 
