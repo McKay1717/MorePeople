@@ -3,6 +3,8 @@ package net.minecraft.src;
 
 import java.io.File;
 import java.util.Map;
+import java.util.Random;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -32,7 +34,7 @@ public class mod_PvP extends BaseMod   {
 	static int niveau = 3;
 	static int maxplayer = 20;
 	static boolean EpicMode = false;
-	public int id = ModLoader.getUniqueEntityId();
+	public static int id = ModLoader.getUniqueEntityId();
 	
  public void registerrecipe()
  {
@@ -50,6 +52,14 @@ public class mod_PvP extends BaseMod   {
 	 ModLoader.registerEntityID(EntityNotch.class, "Notch", id+8, 511651, 151321);
 	 ModLoader.registerEntityID(EntityChrisFly81.class, "ChrisFly81", id+7, 1615546, 54941265);
 	 ModLoader.registerEntityID(EntityTheDudu36.class, "TheDudu36", id+9, 64654, 359974);
+	 ModLoader.registerEntityID(EntityAgeo.class, "Ageo", id+10, 644554, 35995754);
+	 ModLoader.registerEntityID(EntityBynouz.class, "Bynouz", id+11, 644554, 35995754);
+	 ModLoader.registerEntityID(EntityLeSilouatien.class, "LeSilouatien", id+11, 4554, 35995754);
+	 ModLoader.registerEntityID(Entitypirimaru.class, "pirimaru", id+12, 644554, 359754);
+	 ModLoader.registerEntityID(EntitySoxyn.class, "Soxyn", id+13, 6554, 359957);
+	 ModLoader.registerEntityID(EntityTurBo67.class, "TurBo67", id+14, 644554, 355754);
+//	 ModLoader.registerEntityID(EntityMedlinya.class, "Medlinya", id+15, 6444, 359754);
+//	 ModLoader.registerEntityID(EntityMedlinya.class, "Medlinya", id+16, 644554, 355754);
  }
  public void PvPspawn()
  {
@@ -75,7 +85,12 @@ public class mod_PvP extends BaseMod   {
 	 map.put(EntityNotch.class, new RenderPvP());
 	 map.put(EntityChrisFly81.class, new RenderPvP());
 	 map.put(EntityTheDudu36.class, new RenderAly());
- 
+	 map.put(EntityAgeo.class, new RenderPvP());
+	 map.put(EntityBynouz.class, new RenderPvP());
+	 map.put(EntityLeSilouatien.class, new RenderPvP());
+	 map.put(Entitypirimaru.class, new RenderPvP());
+	 map.put(EntitySoxyn.class, new RenderPvP());
+	 map.put(EntityTurBo67.class, new RenderPvP());
  }
 
 	public static boolean configurationProperties()
@@ -105,6 +120,25 @@ public class mod_PvP extends BaseMod   {
 public String getVersion() {
 	// TODO Auto-generated method stub
 	return null;
+}
+@Override
+public void generateSurface(World world, Random random, int BaseX, int BaseZ) 
+{
+	BiomeGenBase BiomeGenbase = world.getWorldChunkManager().getBiomeGenAt(BaseX, BaseZ); 
+	boolean s = false;
+	for(float i = 0; i < 0.2f; i++) 
+	{if(BiomeGenbase instanceof BiomeGenPlains)  
+	{
+		int x = BaseX + random.nextInt(16);
+		
+		int z = BaseZ + random.nextInt(16);
+		int y =  world.getHeightValue(x, z);
+		 (new AlchemistTower()).generate(world, random, x, y, z);
+s =true;
+	}
+	}
+	
+   
 }
 @Override
 public void load() {

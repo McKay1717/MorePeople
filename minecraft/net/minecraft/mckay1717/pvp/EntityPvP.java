@@ -8,7 +8,7 @@ public abstract class EntityPvP extends EntityMob
 	public EntityPvP(World par1World) {
 		super(par1World);
 		this.skinUrl = "http://skins.minecraft.net/MinecraftSkins/" + username + ".png";
-		this.attackStrength = 4;
+
         this.moveSpeed = 0.38555F;
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIBreakDoor(this));

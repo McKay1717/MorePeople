@@ -4,7 +4,7 @@ import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.asm.SideOnly;
 import net.minecraft.src.*;
 
-public class Entityvoolvif extends EntityPvP
+public class Entityvoolvif extends EntityPvP implements IRangedAttackMob
 {
     /** The ItemStack that any Skeleton holds (a bow). */
     private static final ItemStack defaultHeldItem = new ItemStack(Item.bow, 1);
@@ -17,7 +17,7 @@ public class Entityvoolvif extends EntityPvP
         this.tasks.addTask(1, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIRestrictSun(this));
         this.tasks.addTask(3, new EntityAIFleeSun(this, this.moveSpeed));
-        this.tasks.addTask(4, new EntityAIArrowAttack(this, this.moveSpeed, 1, 60));
+        this.tasks.addTask(4, new EntityAIArrowAttack(this, this.moveSpeed, 60, 10.0F));
         this.tasks.addTask(5, new EntityAIWander(this, this.moveSpeed));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntitySticor.class, 8.0F));
         this.tasks.addTask(6, new EntityAILookIdle(this));
@@ -83,4 +83,10 @@ public class Entityvoolvif extends EntityPvP
     {
         return Item.arrow.shiftedIndex;
     }
+
+	@Override
+	public void func_82196_d(EntityLiving var1) {
+		// TODO Auto-generated method stub
+		
+	}
 }
