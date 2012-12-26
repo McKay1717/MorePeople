@@ -1,17 +1,16 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.EntityAIAttackOnCollide;
-import net.minecraft.src.EntityAIHurtByTarget;
-import net.minecraft.src.EntityAINearestAttackableTarget;
-import net.minecraft.src.EntityAIWatchClosest;
-import net.minecraft.src.EntityMob;
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.ai.*;
+import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.src.*;
+import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
 
 public class Entitycypobos extends EntityPvP {
-	private static final ItemStack defaultHeldItem = new ItemStack(net.minecraft.src.Item.axeSteel, 1);
+	private static final ItemStack defaultHeldItem = new ItemStack(net.minecraft.item.Item.axeSteel, 1);
 	public Entitycypobos(World par1World) {
 		super(par1World);
 		this.username  = "cypobos";

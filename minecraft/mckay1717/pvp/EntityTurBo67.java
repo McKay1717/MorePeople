@@ -1,8 +1,8 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.World;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class EntityTurBo67 extends EntityPvP {
 

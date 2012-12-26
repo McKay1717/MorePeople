@@ -1,6 +1,11 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.*;
+import net.minecraft.*;
+import net.minecraft.entity.ai.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 
 public class EntityAgeo extends EntityPvP {
 

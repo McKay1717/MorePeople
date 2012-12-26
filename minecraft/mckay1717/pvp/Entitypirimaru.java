@@ -1,7 +1,7 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 
 public class Entitypirimaru extends EntityPvP {
 

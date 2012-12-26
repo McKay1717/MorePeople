@@ -1,16 +1,14 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 
-public class EntityBynouz extends EntityPvP {
+public class EntityMedlinya extends EntityPvP {
 
 
-	public EntityBynouz(World par1World) {
+	public EntityMedlinya(World par1World) {
 		super(par1World);
-		this.username = "Bynouz";
+		this.username = "Medlinya";
 		this.skinUrl = "http://skins.minecraft.net/MinecraftSkins/" + username + ".png";
 		// TODO Auto-generated constructor stub
 	}

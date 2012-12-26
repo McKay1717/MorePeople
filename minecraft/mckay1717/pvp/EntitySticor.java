@@ -1,10 +1,10 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.DamageSource;
-import net.minecraft.src.EntityAIHurtByTarget;
-import net.minecraft.src.EntityPig;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
 
 public class EntitySticor extends EntityPvP {
 

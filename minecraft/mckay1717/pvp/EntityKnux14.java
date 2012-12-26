@@ -1,6 +1,13 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.ai.*;
+import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.src.*;
+import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
 
 public class EntityKnux14 extends EntityPvP {
 

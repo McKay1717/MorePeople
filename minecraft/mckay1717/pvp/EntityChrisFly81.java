@@ -1,16 +1,8 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.*;
-import net.minecraft.src.EntityAIBreakDoor;
-import net.minecraft.src.EntityAIHurtByTarget;
-import net.minecraft.src.EntityAILookIdle;
-import net.minecraft.src.EntityAISwimming;
-import net.minecraft.src.EntityAIWander;
-import net.minecraft.src.EntityMob;
-import net.minecraft.src.EntityPig;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
-
+import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 public class EntityChrisFly81 extends  EntityPvP {
 	
 	

@@ -1,9 +1,9 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.Item;
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 
 public class EntitySoxyn extends EntityPvP {
 
@@ -11,7 +11,7 @@ public class EntitySoxyn extends EntityPvP {
 	public EntitySoxyn(World par1World) {
 		super(par1World);
 		this.username = "Soxyn";
-		this.skinUrl = "http://skins.minecraft.net/MinecraftSkins/" + username + ".png";
+		this.skinUrl = "http://skins.minecraft.net/MinecraftSkins/" + "soxyn" + ".png";
 		// TODO Auto-generated constructor stub
 	}
 	public ItemStack getHeldItem()

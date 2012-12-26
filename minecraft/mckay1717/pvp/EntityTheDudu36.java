@@ -1,8 +1,10 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.src.*;
+import net.minecraft.world.World;
 
-public class EntityTheDudu36 extends  EntityAly {
+public class EntityTheDudu36 extends  EntityPvP {
 
 	public EntityTheDudu36(World par1World) {
 		super(par1World);

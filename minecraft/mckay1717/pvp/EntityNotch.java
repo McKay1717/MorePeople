@@ -1,11 +1,11 @@
-package net.minecraft.mckay1717.pvp;
+package mckay1717.pvp;
 
-import net.minecraft.src.ItemStack;
-import net.minecraft.src.NBTTagCompound;
-import net.minecraft.src.World;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
 
 public class EntityNotch extends EntityPvP {
-	private static final ItemStack defaultHeldItem = new ItemStack(net.minecraft.src.Item.appleRed, 1);
+	private static final ItemStack defaultHeldItem = new ItemStack(net.minecraft.item.Item.appleRed, 1);
 	public EntityNotch(World par1World) {
 		super(par1World);
 		this.username = "Notch";
